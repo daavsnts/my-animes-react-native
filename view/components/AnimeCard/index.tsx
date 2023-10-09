@@ -71,4 +71,3 @@ export default function AnimeCard({ anime, navigation }: AnimeCardProps) {
     </Card>
   );
 }
-

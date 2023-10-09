@@ -8,7 +8,7 @@ import { RootStackParamList } from '../app-navigator'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { ColorScheme } from '../../theme/theme';
 
-type DiscoverProps = {
+type DiscoverScreenProps = {
   navigation: NativeStackNavigationProp<RootStackParamList>
 }
 
@@ -27,7 +27,7 @@ const Container = styled.View`
   gap: 10px;
 `
 
-export default function Discover({ navigation }: DiscoverProps) {
+export default function DiscoverScreen({ navigation }: DiscoverProps) {
   const { animeListUiState: trending } = useAnimeList({ type: 'sort: TRENDING_DESC' })
   const { animeListUiState: popularThisYear } = useAnimeList({ type: 'seasonYear: 2023, sort: POPULARITY_DESC' })
   const { animeListUiState: popularAllTime } = useAnimeList({ type: 'sort: POPULARITY_DESC' })
@@ -53,4 +53,3 @@ export default function Discover({ navigation }: DiscoverProps) {
     </ScreenBackground>
   );
 }
-

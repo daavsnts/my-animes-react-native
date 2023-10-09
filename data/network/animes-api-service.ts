@@ -1,7 +1,7 @@
-import axios from 'axios'
+import axios from "axios";
 
 export default function AnimesApiService() {
-  const baseURL = 'https://graphql.anilist.co'
+  const baseURL = "https://graphql.anilist.co";
 
   async function fetchAnimeList(type: string) {
     try {
@@ -29,20 +29,18 @@ export default function AnimesApiService() {
             }
           }
           `,
-        }
+        },
       );
       return response.data.data.Page.media;
     } catch (error: any) {
-      return error
+      return error;
     }
   }
 
   async function fetchAnimeDetails(id: string) {
     try {
-      const response = await axios.post<{ data: { Media: Anime } }>(
-        baseURL,
-        {
-          query: `
+      const response = await axios.post<{ data: { Media: Anime } }>(baseURL, {
+        query: `
           query($id: Int) {
             Media(id: $id) {
               id
@@ -63,19 +61,18 @@ export default function AnimesApiService() {
             }
         }
           `,
-          variables: {
-            id: parseInt(id)
-          }
-        }
-      );
+        variables: {
+          id: parseInt(id),
+        },
+      });
       return response.data.data.Media;
     } catch (error: any) {
-      return error
+      return error;
     }
   }
 
   return {
     fetchAnimeList,
-    fetchAnimeDetails
-  }
+    fetchAnimeDetails,
+  };
 }

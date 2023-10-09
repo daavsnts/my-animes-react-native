@@ -1,20 +1,20 @@
-type Anime  = {
-  id: number
+type Anime = {
+  id: number;
   title: {
-    romaji: string
-    english: string
-    native: string
-  }
-  description: string
+    romaji: string;
+    english: string;
+    native: string;
+  };
+  description: string;
   startDate: {
-    year: number
-    month: number
-    day: number
-  }
-  averageScore: number
-  genres: string[]
+    year: number;
+    month: number;
+    day: number;
+  };
+  averageScore: number;
+  genres: string[];
   coverImage: {
-    large: string
-    extraLarge: string
-  }
-}
+    large: string;
+    extraLarge: string;
+  };
+};

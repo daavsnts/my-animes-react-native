@@ -52,4 +52,3 @@ function RenderAnimeList({ title, list, navigation }: RenderListProps) {
     </View>
   )
 }
-
