@@ -25,7 +25,7 @@ const Poster = styled.Image`
   position: absolute;
 `
 
-const Card = styled.View`
+const Card = styled.Pressable`
   background-color: ${ColorScheme.surface};
   width: 170px;
   height: 230px;
@@ -61,7 +61,7 @@ export default function AnimeCard({ anime, navigation }: AnimeCardProps) {
   const releaseDate = `${(month < 10) ? '0' + month : month}/${(day < 10) ? '0' + day : day}/${year}`
 
   return (
-    <Card onTouchStart={() => { navigation.navigate('Details', { id: id.toString() }) }}>
+    <Card onPress={() => { navigation.navigate('Details', { id: id.toString() }) }}>
       <Poster source={{ uri: coverUri }} />
       <Gradient />
       <Content>

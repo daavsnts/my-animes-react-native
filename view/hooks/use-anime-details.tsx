@@ -11,7 +11,7 @@ export default function useAnimeDetails({ id }: useAnimeDetailsProps) {
 
   const getAnimeDetails = useCallback(async function(id: string) {
     try {
-      const { fetchAnimeDetails } = AnimesApiService()
+      const { fetchAnimeDetails } = AnimesApiService
       const animeDetails = await fetchAnimeDetails(id)
       setAnimeDetailsUiState(new SuccessState(animeDetails))
     } catch (error: any) {

@@ -2,7 +2,6 @@ import DiscoverScreen from '../../view/screens/Discover'
 import DetailsScreen from './Details';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ColorScheme } from '../theme/theme'
 import { StatusBar } from 'expo-status-bar'
 
 export type RootStackParamList = {

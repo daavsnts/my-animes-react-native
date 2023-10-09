@@ -11,7 +11,7 @@ export default function useAnimeList({ type }: useAnimeListProps) {
 
   const getAnimeList = useCallback(async function(type: string) {
     try {
-      const { fetchAnimeList } = AnimesApiService()
+      const { fetchAnimeList } = AnimesApiService
       const animeList = await fetchAnimeList(type)
       setAnimeListUiState(new SuccessState(animeList))
     } catch (error: any) {

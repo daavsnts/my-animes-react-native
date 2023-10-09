@@ -27,7 +27,7 @@ const Container = styled.View`
   gap: 10px;
 `
 
-export default function DiscoverScreen({ navigation }: DiscoverProps) {
+export default function DiscoverScreen({ navigation }: DiscoverScreenProps) {
   const { animeListUiState: trending } = useAnimeList({ type: 'sort: TRENDING_DESC' })
   const { animeListUiState: popularThisYear } = useAnimeList({ type: 'seasonYear: 2023, sort: POPULARITY_DESC' })
   const { animeListUiState: popularAllTime } = useAnimeList({ type: 'sort: POPULARITY_DESC' })
