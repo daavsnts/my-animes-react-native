@@ -2,7 +2,6 @@ import axios from "axios";
 
 function createAnimesApiService() {
   const baseURL = "https://graphql.anilist.co";
-  console.log("instanciou meu parça?");
   async function fetchAnimeList(type: string) {
     try {
       const response = await axios.post<{ data: { Page: { media: Anime[] } } }>(
