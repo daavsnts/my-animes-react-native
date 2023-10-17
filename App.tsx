@@ -1,4 +1,3 @@
-import { View } from 'react-native';
 import { styled } from 'styled-components/native';
 import AppNavigator from './view/screens/app-navigator';
 import { ColorScheme } from './view/theme/theme';
